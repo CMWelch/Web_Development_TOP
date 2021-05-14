@@ -2,7 +2,7 @@
 This repository is for web development projects completed through The Odin Project course
 
 Current Progress:
-HTML & CSS: Tribute
+HTML & CSS:  Tribute Page
 
 Future goals:
 JavaScript,
