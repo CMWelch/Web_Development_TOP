@@ -1,10 +1,10 @@
 # Web_Development_TOP
 This repository is for web development projects completed through The Odin Project course
 
-Current Progress:
-HTML & CSS:  Tribute Page
+Current Progress - <br><br>
+HTML & CSS:<br>           Tribute Page
 
-Future goals:
+Future goals - <br>
 JavaScript,
 React,
 Angular,
