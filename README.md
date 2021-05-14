@@ -5,6 +5,6 @@ Current Progress:
 HTML & CSS
 
 Future goals:
-JavaScript
-React
-Angular
+JavaScript,
+React,
+Angular,
