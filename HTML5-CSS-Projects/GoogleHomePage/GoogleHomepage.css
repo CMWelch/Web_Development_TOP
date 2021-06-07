@@ -1,5 +1,9 @@
-#top-nav-bar {
+body {
+  margin: 0px;
+}
 
+img {
+  height: 2em;
 }
 
 a {
@@ -7,3 +11,36 @@ a {
   text-decoration: none;
 }
 a:hover {text-decoration: underline;}
+
+.top-nav-bar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 8px;
+}
+
+.top-left-nav {
+  font-size: 14px;
+  font-family: "Roboto", arial, sans-serif;
+  padding-left: 10px;
+}
+
+.top-right-nav {
+font-size: 13px;
+font-family: arial, sans-serif;
+padding: 3px 10px 3px 10px;
+}
+
+.nav-item {
+  margin: 8px;
+}
+
+.sign-up.mdl-button {
+  background-color: #1977d8;
+  color: white;
+  font-family: "Google Sans", "Roboto", arial, sans-serif;
+  text-transform: none;
+  border-radius: 5%;
+  width: 100px;
+  min-width: initial;
+}
