@@ -44,3 +44,17 @@ padding: 3px 10px 3px 10px;
   width: 100px;
   min-width: initial;
 }
+
+.google-image {
+  display: flex;
+  height: 50%;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.google {
+  display: flex;
+  height: 50%;
+  padding-top: 10em;
+}
