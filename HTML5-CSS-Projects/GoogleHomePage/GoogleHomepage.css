@@ -35,6 +35,11 @@ padding: 3px 10px 3px 10px;
   margin: 8px;
 }
 
+#menu-icon {
+  margin: 0px 15px 0px 15px;
+  height: 22.5px;
+}
+
 .sign-up.mdl-button {
   background-color: #1977d8;
   color: white;
