@@ -3,8 +3,8 @@
 * {
     box-sizing: border-box;
     font-family: "Rajdhani";
-    font-size: 1.05em;
-    color: #888;
+    font-size: 1.1em;
+    color: #999;
 }
 
 html, body {
@@ -19,9 +19,7 @@ html, body {
 }
 
 .nav li {
-    display: inline;
-
-    
+    display: inline;    
 }
 
 .nav a {
@@ -65,7 +63,7 @@ html, body {
 
 .container {
     margin: 0 auto;
-    max-width: 900px;
+    max-width: 1200px;
     padding: 0 1.5em;
 }
 
@@ -87,4 +85,32 @@ html, body {
     height: 300px;
     border-radius: 50%;
     margin: 15px;
+}
+
+.main-footer {
+    padding: .5em 0;
+}
+
+.main-footer-container {
+    display: flex;
+    align-items: center;
+}
+
+.main-footer-container ul {
+    flex-grow: 1;
+    text-align: end;
+}
+
+.footer-image {
+    width: 100px;
+    height: 100px;
+}
+
+ .social-icon {
+    width: 40px;
+    height: 40px;
+} 
+
+.footer-nav li {
+    padding: 0 .5em;
 }
