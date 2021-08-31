@@ -4,12 +4,13 @@
     box-sizing: border-box;
     font-family: "Rajdhani";
     font-size: 1.05em;
-    color: #777;
+    color: #888;
 }
 
 html, body {
     margin: 0;
     padding: 0;
+    background-color: black;
 }
 
 .nav ul {
@@ -19,6 +20,8 @@ html, body {
 
 .nav li {
     display: inline;
+    justify-content: center;
+    padding: 2.5rem;
 }
 
 .nav a {
@@ -33,11 +36,20 @@ html, body {
     background-color: rgb(255, 255, 255, .3);
 }
 
-.main-header {
-    background-image: url("images/au5name.png");
+.main-nav {
+    text-align: center;
+    font-size: 1.4em;
+}
+
+.header-image {
     background-color: black;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    z-index: -1;
+   
+}
+
+.header-image img {
+    width: 25%;
+    height: 25%;
 }
