@@ -65,6 +65,7 @@ html, body {
 
 .content-section {
     margin: 1em;
+    font-size: 1.1em;
 }
 
 .container {
@@ -127,7 +128,7 @@ html, body {
     vertical-align: middle;
     padding: .67em;
     cursor: pointer;
-    border: 2px solid var(--au5blue);
+    border: 1px solid var(--au5blue);
     background-color: black;
 }
 
@@ -151,4 +152,32 @@ html, body {
     border-bottom: 1px solid var(--au5bluetrans);
     padding-bottom: 1em;
     margin-bottom: 1em;
+}
+
+.show-row:last-child {
+    border-bottom: none;
+}
+
+.show-item {
+    display: inline-block;
+    margin-right: .2em;
+}
+
+.show-date {
+    font-weight: bold;
+    width: 12%;
+}
+
+.show-city {
+    width: 30%;
+}
+
+.show-arena {
+    width: 45%;
+}
+
+.show-btn {
+    max-width: 11%;
+    margin-right: 0;
+    padding: .25em;
 }
