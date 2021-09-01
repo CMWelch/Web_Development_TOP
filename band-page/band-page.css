@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
 
+:root {
+    --au5blue: rgb(149, 186, 255);
+}
+
+
 * {
     box-sizing: border-box;
     font-family: "Rajdhani";
@@ -25,7 +30,7 @@ html, body {
 .nav a {
     display: inline-block;
     padding: .5em;
-    color: rgb(149, 186, 255);
+    color: var(--au5blue);
     text-decoration: none;
 }
 
@@ -68,7 +73,7 @@ html, body {
 }
 
 .section-header {
-    color: rgb(149, 186, 255);
+    color: var(--au5blue);
     font-weight: normal;
     font-size: 2em;
     text-align: center;
@@ -113,4 +118,14 @@ html, body {
 
 .footer-nav li {
     padding: 0 .5em;
+}
+
+.btn {
+    color: var(--au5blue);
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em;
+    cursor: pointer;
+    border: 2px solid var(--au5blue);
+    background-color: black;
 }
