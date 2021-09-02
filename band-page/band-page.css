@@ -229,6 +229,7 @@ html, body {
     border-bottom: 1px solid var(--au5bluetrans);
     margin-right: 1.5em;
     margin-top: 10px;
+    padding-bottom: 5px;
 }
 
 .cart-row {
@@ -239,10 +240,10 @@ html, body {
     width: 15%;
 }
 
-/* .cart-price {
+.cart-price {
     width: 20%;
 }
 
-.car-quantity {
+.cart-quantity {
     width: 45%;
-} */
+} 
