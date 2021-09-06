@@ -1,14 +1,29 @@
-let removeCartItemsBtns = document.getElementsByClassName('cart-btn');
-console.log(removeCartItemsBtns);
-
-for(let i = 0; i < removeCartItemsBtns.length; i++)
+if(document.readyState == 'loading')
 {
-    let button = removeCartItemsBtns[i];
-    button.addEventListener('click', function(event) {
-        let buttonClicked = event.target
-        buttonClicked.parentElement.parentElement.remove()
-        updateCartTotal()    
-    })
+    document.addEventListener('DOMContentLoaded', ready)
+}
+else 
+{
+    ready()
+}
+
+function ready()
+{
+    let removeCartItemsBtns = document.getElementsByClassName('cart-btn');
+    console.log(removeCartItemsBtns);
+
+    for(let i = 0; i < removeCartItemsBtns.length; i++)
+    {
+        let button = removeCartItemsBtns[i];
+        button.addEventListener('click', removeCartItem)
+    }
+}
+
+function removeCartItem(event) 
+{
+    let buttonClicked = event.target
+    buttonClicked.parentElement.parentElement.remove()
+    updateCartTotal()    
 }
 
 function updateCartTotal() 
@@ -21,7 +36,7 @@ function updateCartTotal()
         let priceElement = cartRow.getElementsByClassName('cart-price')[0]
         let quantityElement = cartRow.getElementsByClassName('cart-input')[0]
 
-        let price = priceElement.innerText.replace('$', '')
+        let price = parseFloat(priceElement.innerText.replace('$', ''))
         let quantity = quantityElement.value
         
         let priceChange = price * quantity
