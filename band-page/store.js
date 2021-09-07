@@ -92,8 +92,8 @@ function addItemToCart(title, image, price)
     let button = cartRow.getElementsByClassName('cart-btn')[0];
     button.addEventListener('click', removeCartItem);
 
-    let quantityInputs = document.getElementsByClassName('cart-input');
-    button.addEventListener('change', quantityChanged);
+    let quantityInputs = cartRow.getElementsByClassName('cart-input')[0];
+    quantityInputs.addEventListener('change', quantityChanged);
 }
 
 function quantityChanged(event)
