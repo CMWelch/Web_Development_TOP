@@ -29,6 +29,19 @@ function ready()
         let button = addToCart[i];
         button.addEventListener('click', addItemToCartClicked);
     }
+
+    document.getElementsByClassName('purchase-btn')[0].addEventListener('click', purchaseClicked)
+}
+
+function purchaseClicked() 
+{
+    alert('Thank you for your purchase');
+    let items = document.getElementsByClassName('cart-items')[0];
+    while(items.hasChildNodes())
+    {
+        items.removeChild(items.firstChild);
+    }
+    updateCartTotal();
 }
 
 function addItemToCartClicked(event)
