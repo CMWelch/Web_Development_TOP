@@ -10,7 +10,6 @@ else
 function ready()
 {
     let removeCartItemsBtns = document.getElementsByClassName('cart-btn');
-
     for(let i = 0; i < removeCartItemsBtns.length; i++)
     {
         let button = removeCartItemsBtns[i];
@@ -23,6 +22,65 @@ function ready()
         let input = quantityInputs[i];
         input.addEventListener('change', quantityChanged);
     }
+
+    let addToCart = document.getElementsByClassName('store-btn');
+    for(let i = 0; i < addToCart.length; i++)
+    {
+        let button = addToCart[i];
+        button.addEventListener('click', addItemToCartClicked);
+    }
+}
+
+function addItemToCartClicked(event)
+{
+    let button = event.target;
+    let storeItem = button.parentElement.parentElement;
+
+    let title = storeItem.getElementsByClassName('store-item-title')[0].innerText;
+    let image = storeItem.getElementsByClassName('store-item-image')[0].src;
+    let price = storeItem.getElementsByClassName('store-item-price')[0].innerText;
+
+    console.log(image);
+    addItemToCart(title, image, price);
+    updateCartTotal();
+}
+
+function addItemToCart(title, image, price)
+{
+    let cartRow = document.createElement('div');
+    cartRow.classList.add('cart-row');
+    let cartItems = document.getElementsByClassName('cart-items')[0];
+
+    let cartItemNames = cartItems.getElementsByClassName('cart-item-title');
+
+    for(let i = 0; i < cartItemNames.length; i++)
+    {
+        if(cartItemNames[i].innerText == title)
+        {
+            alert('Item already added to cart');
+            return;
+        }
+    }
+
+    let cartRowContents = 
+    `<div class="cart-item cart-column">
+        <img src="${image}" width="50" height="50">
+        <span class="cart-item-title">${title}</span>
+    </div>
+    <span class="cart-price cart-column">${price}</span>
+    <div class="cart-quantity cart-column">
+        <input class="cart-input" type="number" value="1">
+        <button class="btn cart-btn">REMOVE</button>
+    </div>`;
+
+    cartRow.innerHTML = cartRowContents;
+    cartItems.append(cartRow);
+
+    let button = cartRow.getElementsByClassName('cart-btn')[0];
+    button.addEventListener('click', removeCartItem);
+
+    let quantityInputs = document.getElementsByClassName('cart-input');
+    button.addEventListener('change', quantityChanged);
 }
 
 function quantityChanged(event)
