@@ -1,0 +1,20 @@
+{
+  "name": "web_development_top",
+  "version": "1.0.0",
+  "description": "This repository is for web development projects completed through The Odin Project course",
+  "main": "app.js",
+  "type":"module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CMWelch/Web_Development_TOP.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CMWelch/Web_Development_TOP/issues"
+  },
+  "homepage": "https://github.com/CMWelch/Web_Development_TOP#readme"
+}
