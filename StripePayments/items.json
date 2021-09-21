@@ -1,0 +1,42 @@
+{
+    "albums and ep's": [
+        {
+            "id": 1,
+            "name": "Alchemy",
+            "price": 299,
+            "imgName": "alchemy.jpeg"
+        },
+        {
+            "id": 2,
+            "name": "Dusk",
+            "price": 499,
+            "imgName": "dusk.jpeg"
+        },
+        {
+            "id": 3,
+            "name": "Divinorum",
+            "price": 1099,
+            "imgName": "divinorum.jpeg"
+        },
+        {
+            "id": 4,
+            "name": "Freefall",
+            "price": 399,
+            "imgName": "freefall.jpeg"
+        }
+    ],
+    "merch": [
+        {
+            "id": 5,
+            "name": "Dusk Shirt",
+            "price": 2500,
+            "imgName": "au5shirt1.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Divinorum Shirt",
+            "price": 1000,
+            "imgName": "au5shirt2.jpeg"
+        }
+    ]
+}
