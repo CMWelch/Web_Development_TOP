@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import { dirname } from 'path';
 import { fileURLToPath } from "url";
+import * as fs from 'fs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -18,5 +19,20 @@ const app = express();
 
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public/band-page'));
+
+app.get('/store.html', function(req, res) {
+    fs.readFile('items.json', function(error, data) {
+        if(error)
+        {
+            res.status(500).end();
+        }
+        else 
+        {
+            res.render('store.ejs', {
+                items: JSON.parse(data)
+            })
+        }
+    })
+})
 
 app.listen(3000);

@@ -25,41 +25,18 @@
             <h2 class="section-header">Albums and EP's</h2>
 
             <div class="store-items">
-                <div class="store-item">
-                    <span class="store-item-title">Alchemy</span>
-                    <img class="store-item-image" src="images/alchemy.jpeg" alt="">
-                    <div class="store-item-details">
-                        <span class="store-item-price">$2.99</span>
-                        <button class="btn store-btn">Add To Cart</button>
+            
+               <% items.albums.forEach(function(item){ %>
+                    <div class="store-item">
+                        <span class="store-item-title"><%= item.name %></span>
+                        <img class="store-item-image" src="images/<%= item.imgName %>" alt="">
+                        <div class="store-item-details">
+                            <span class="store-item-price">$<%= item.price /100 %></span>
+                            <button class="btn store-btn">Add To Cart</button>
+                        </div>
                     </div>
-                </div>
+                <% }) %> 
 
-                <div class="store-item">
-                    <span class="store-item-title">Dusk</span>
-                    <img class="store-item-image" src="images/dusk.jpeg" alt="">
-                    <div class="store-item-details">
-                        <span class="store-item-price">$4.99</span>
-                        <button class="btn store-btn">Add To Cart</button>
-                    </div>
-                </div>
-
-                <div class="store-item">
-                    <span class="store-item-title">Divinorum</span>
-                    <img class="store-item-image" src="images/divinorum.jpeg" alt="">
-                    <div class="store-item-details">
-                        <span class="store-item-price">$10.99</span>
-                        <button class="btn store-btn">Add To Cart</button>
-                    </div>
-                </div>
-
-                <div class="store-item">
-                    <span class="store-item-title">Freefall</span>
-                    <img class="store-item-image" src="images/freefall.jpeg" alt="">
-                    <div class="store-item-details">
-                        <span class="store-item-price">$3.99</span>
-                        <button class="btn store-btn">Add To Cart</button>
-                    </div>
-                </div>
             </section>
             <section class="container content-section">
                 <h2 class="section-header">Merch</h2>
