@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="band-page.css">
         <script src="store.js" async></script>
     </head>
+
     <body>
         <header class="main-header">
             <nav class="nav main-nav">
@@ -14,20 +15,35 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="store.html">Store</a></li>
-                </ul>             
-            </nav>    
+                </ul>
+            </nav>
             <div class="header-image">
                 <img src="images/au5name.png" alt="">
             </div>
-        </header> 
+        </header>
 
         <section class="container content-section">
             <h2 class="section-header">Albums and EP's</h2>
-
             <div class="store-items">
-            
-               <% items.albums.forEach(function(item){ %>
-                    <div class="store-item">
+                <% items.albums.forEach(function(item){ %>
+                    <div class="store-item" data-item-id="<% item.id %>">
+                        <span class="store-item-title">
+                            <%= item.name %>
+                        </span>
+                        <img class="store-item-image" src="images/<%= item.imgName %>" alt="">
+                        <div class="store-item-details">
+                            <span class="store-item-price">$<%= item.price /100 %></span>
+                            <button class="btn store-btn">Add To Cart</button>
+                        </div>
+                    </div>
+                    <% }) %>
+            </div>
+        </section>
+        <section class="container content-section">
+            <h2 class="section-header">Merch</h2>
+            <div class="store-items">
+                <% items.merch.forEach(function(item){ %>
+                    <div class="store-item" data-item-id="<% item.id %>">
                         <span class="store-item-title"><%= item.name %></span>
                         <img class="store-item-image" src="images/<%= item.imgName %>" alt="">
                         <div class="store-item-details">
@@ -36,39 +52,18 @@
                         </div>
                     </div>
                 <% }) %> 
-
-            </section>
-            <section class="container content-section">
-                <h2 class="section-header">Merch</h2>
-                <div class="store-items">
-                    <div class="store-item">
-                        <span class="store-item-title">Dusk Shirt</span>
-                        <img class="store-item-image" src="images/au5shirt1.jpg" alt="">
-                        <div class="store-item-details">
-                            <span class="store-item-price">$25.00</span>
-                            <button class="btn store-btn">Add To Cart</button>
-                        </div>
-                    </div>
-                    <div class="store-item">
-                        <span class="store-item-title">Divinorum Shirt</span>
-                        <img class="store-item-image" src="images/au5shirt2.jpeg" alt="">
-                        <div class="store-item-details">
-                            <span class="store-item-price">$10.00</span>
-                            <button class="btn store-btn">Add To Cart</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="container content-section">
-                <h3 class="section-header">Cart</h2>
+            </div>
+        </section>
+        <section class="container content-section">
+            <h3 class="section-header">Cart</h2>
                 <div class="cart-row">
-                    <span class="cart-item cart-header cart-column">ITEM</span>                    
-                    <span class="cart-price cart-header cart-column">PRICE</span>                    
-                    <span class="cart-quantity cart-header cart-column">QUANTITY</span>                    
+                    <span class="cart-item cart-header cart-column">ITEM</span>
+                    <span class="cart-price cart-header cart-column">PRICE</span>
+                    <span class="cart-quantity cart-header cart-column">QUANTITY</span>
                 </div>
                 <div class="cart-items">
 
-                </div>                                
+                </div>
                 <div class="cart-total">
                     <div class="">
                         <span>Total:</span>
@@ -83,13 +78,18 @@
             <div class="container main-footer-container">
                 <img class="footer-image" src="images/au5music.jpg" alt="">
                 <ul class="footer-nav nav">
-                    
-                    <li><a href="https://facebook.com" target="_blank"><img class="social-icon" src="images/facebook.png" alt=""></a></li>
-                    <li><a href="https://youtube.com" target="_blank"><img class="social-icon" src="images/youtube.png" alt=""></a></li>
-                    <li><a href="https://spotify.com" target="_blank"><img class="social-icon" src="images/spotify.png" alt=""></a></li>
-                    <li><a href="https://soundcloud.com" target="_blank"><img class="social-icon" src="images/soundcloud.png" alt=""></a></li>
+
+                    <li><a href="https://facebook.com" target="_blank"><img class="social-icon" src="images/facebook.png"
+                                alt=""></a></li>
+                    <li><a href="https://youtube.com" target="_blank"><img class="social-icon" src="images/youtube.png"
+                                alt=""></a></li>
+                    <li><a href="https://spotify.com" target="_blank"><img class="social-icon" src="images/spotify.png"
+                                alt=""></a></li>
+                    <li><a href="https://soundcloud.com" target="_blank"><img class="social-icon"
+                                src="images/soundcloud.png" alt=""></a></li>
                 </ul>
             </div>
         </footer>
     </body>
+
 </html>
